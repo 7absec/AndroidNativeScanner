@@ -40,9 +40,12 @@ pip install termcolor
 
 ### Scan a single `.so` file with default patterns
 
+### Default Mode
+Using built-in sensitive and flag patterns:
 ```bash
 python NativeScanner.py path/to/lib***.so
 ```
+![Default Mode](https://github.com/7absec/AndroidNativeScanner/blob/main/Default_mode.png)
 
 ### Scan a directory recursively
 
@@ -50,7 +53,8 @@ python NativeScanner.py path/to/lib***.so
 python NativeScanner.py path/to/libs/
 ```
 
-### Custom search pattern (plain or regex)
+### Custom Mode
+Using user-supplied search patterns:
 
 ```bash
 # Plain string search
@@ -59,6 +63,7 @@ python NativeScanner.py libnativeflag.so -s "CTF{"
 # Regex search
 python NativeScanner.py libnativeflag.so -s "re:CTF\{[A-Za-z0-9_!@\-\.\+]{1,256}\}"
 ```
+![Custom Mode](https://github.com/7absec/AndroidNativeScanner/blob/main/Custom_mode.png)
 
 > If custom search is provided, default patterns are ignored.
 
